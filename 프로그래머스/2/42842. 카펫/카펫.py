@@ -2,7 +2,7 @@ def solution(brown, yellow):
     answer = []
     
     i = 1
-    while (True):
+    while (1):
         if (yellow % i == 0):
             if (brown == (yellow // i * 2) + (i * 2) + 4):
                 answer.append(yellow // i + 2)
