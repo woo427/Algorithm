@@ -12,6 +12,7 @@ def solution(answers):
             scores[1] += 1
         if answers[i] == student3[i%10]:
             scores[2] += 1
+            
     for index, score in enumerate(scores):
         if score == max(scores):
             answer.append(index+1)
