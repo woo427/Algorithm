@@ -1,9 +1,13 @@
+from collections import Counter
+
 def solution(participant, completion):
-    hashDict = {}
-    sum = 0
-    for name in participant:
-        hashDict[hash(name)] = name
-        sum += hash(name)
-    for i in completion:
-        sum -= hash(i)
-    return hashDict[sum]
+    answer = []
+    
+    participant_counter = Counter(participant)
+    completion_counter = Counter(completion)
+    
+    diff = participant_counter - completion_counter
+    
+    answer = list(diff.keys())[0]
+    
+    return answer
