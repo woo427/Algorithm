@@ -1,19 +1,19 @@
-from itertools import combinations 
+from itertools import combinations
 
 def solution(nums):
     answer = 0
-    cmb_list = list(combinations(nums,3))
-    for num_list in cmb_list:
-        if is_prime(sum(num_list)):
+    
+    com_list = list(combinations(nums,3))
+    for num in com_list:
+        if is_Prime(sum(num)):
             answer += 1
     return answer
-
-def is_prime(sum):
-    if sum == 0 or sum == 1:
+    
+def is_Prime(total):
+    if total == 0 or total == 1:
         return False
-    else :
-        for i in range(2,(sum//2)+1):
-            if sum % i == 0:
+    else:
+        for i in range(2,(total//2)+1):
+            if total % i == 0:
                 return False
         return True
-        
