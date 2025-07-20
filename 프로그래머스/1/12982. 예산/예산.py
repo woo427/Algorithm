@@ -1,7 +1,8 @@
 def solution(d, budget):
     d.sort()
-    for idx in range(len(d)):
-        budget -= d[idx]
+    
+    for i in range(len(d)):
+        budget -= d[i]
         if budget < 0:
-            return idx
-    return idx+1
+            return i
+    return len(d)
