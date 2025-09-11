@@ -1,13 +1,12 @@
 import sys
-
 n = int(sys.stdin.readline())
-data = []
+member = []
 
-for idx in range(1,n+1):
+for _ in range(n):
   age, name = sys.stdin.readline().split()
-  data.append([idx, int(age), name])
+  member.append([int(age), name])
 
-data.sort(key= lambda x: (x[1], x[0]))
+member.sort(key=lambda x: x[0])
 
-for d in data:
-  print(d[1], d[2])
+for m in member:
+  print(m[0], m[1])
