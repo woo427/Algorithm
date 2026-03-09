@@ -9,10 +9,12 @@ function solution(s){
             num_y += 1
     }
     
-    if (num_p == num_y) {
-        return true
-    }
-    else
-        return false
+    return num_p === num_y
+    
+    // if (num_p == num_y) {
+    //     return true
+    // }
+    // else
+    //     return false
     
 }
